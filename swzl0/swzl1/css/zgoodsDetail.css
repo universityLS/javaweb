@@ -1,0 +1,212 @@
+body, dd, dl, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, ol, p, select, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+ul{
+	list-style: none;
+}
+body{
+	margin: 0 auto;
+    background: #fff;
+    width:1000px;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+a{
+	text-decoration: none;
+	color: #172c45;
+}
+a.logo{
+    background-image: url(../img/logo.jpg);
+	background-repeat: no-repeat;
+}
+/*放置logo和搜索框的div*/
+.logo{
+    width: 145px;
+    height: 80px; 
+    float:left;
+}
+#logo{
+	margin-left: 160px;
+}
+/*隐藏a标签的文字，当图片无法加载时候才显示文字*/
+span.undis{
+	display: none;
+}
+.search {
+    float: left;
+    z-index: 99;
+    -webkit-margin-before: 2em;
+    -webkit-margin-after: 2em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+#searchTxt{
+	margin-top:20px;
+	padding:0;
+	float:left;
+	border:2px solid #337AB7;
+}
+#searchTxt:hover{
+	border:2px solid #5BC0DE;
+}
+.searchMenu, #searchTxt > input, #searchTxt > button{
+	cursor:pointer;
+	float:left;
+	font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+}
+#searchTxt > button{
+	height: 39px;
+	background-color: #337AB7;
+	border: 0;
+}
+#searchTxt > button:hover{
+	background-color: #A6E1EC;
+}
+/*设置搜索框分类选择按钮的样式*/
+#searchSelected{
+    cursor: pointer;
+    font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    width: 50px;
+    color: #a8a8a8;
+    font-weight: 700;
+    text-align: center;
+}
+#searchTab{
+	display: none;
+	padding-left: 0;
+	margin-left:0;
+	padding:auto 0;
+	text-align: center;
+	position:relative;
+	background-color: #C4E3F3;
+}
+#searchSelected:hover + #searchTab{
+	display: block;
+	z-index: 2;
+	position:relative;
+}
+#searchTab:hover{
+	display: block;
+	z-index: 2;
+	position:relative;
+}
+#searchTab li{
+	cursor:pointer;
+	font-size: 14px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    color: #a8a8a8;
+    font-weight: 700;
+}
+
+#searchTab li:hover{
+	color:#1B6D85;
+}
+.Link{
+	float:right;	
+	padding-top:50px;
+}
+.Link ul li{
+	display:inline;
+}
+.Link ul li a{
+	font-family:"幼圆", "微软雅黑", sans-serif;
+	font-size:16px;
+}
+.Link ul li a:hover{
+	color:#57D2F7;
+}
+.daohang{
+	clear:left;
+	float:left;
+	background-color: #269ABC;
+	width: 1000px;
+	z-index: 0;
+	position:relative;
+}
+.daohang ul li a{
+	float:left;
+	font-size: 18px;
+	padding: 5px 20px;
+	color:#FFFFFF;
+} 
+.daohang ul li a:hover{
+	display: block;
+	color:#FFFF00;
+	background-color: #66AFE9;
+	border-radius: 25px;
+}
+.content{
+	float:left;
+	padding-top: 5px;
+	font-size: 16px;
+	width:32%;
+}
+.content:not(:first-child){
+	margin-left:20px;
+}
+.contentTitle{
+	background-color: rgba(38,154,188,0.8);
+	padding-left: 5px;
+}
+.content ul  a  span{
+	font-size: 12px;
+	color:#8C8C8C;
+	margin-left: 15px;
+	float:right;
+	padding-right:5px;
+}
+.hotFound a{
+	color:BLUE;
+	font-family:"宋体", "幼圆", sans-serif;
+	font-weight:bold;
+	margin-left:5px;
+}
+.content ul > a{
+	width: 100%;
+	display: inline-table;
+	margin:1px 0;
+}
+.content ul li:not(:first-child) a:hover{
+	color:RED;
+	text-decoration:underline;
+}
+.content ul li > img{
+	padding-right:1em;
+}
+a.more{
+	font-size: 12px;
+	color:#FFFFFF;
+	float:right;
+}
+a.more:hover{
+	color:#0000FF;
+}
+.contentTitleA{
+	font-size: 16px;
+	padding: 5px 20px;
+	color:#FFFFFF;
+}
+.contentTitleA:hover{
+	color:#FFFF00;
+	background-color: #66AFE9;
+	border-radius: 25px;
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<title>个人信息页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">     <!-- bootstrap:确保适当的绘制和触屏缩放 -->
+	<link rel="stylesheet" href="css/content_page.css" />
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+	<!-- <script src="js/jquery-3.1.1.min.js" ></script>
+	<script src="js/bootstrap.min.js" ></script> -->
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+</head>
+<body>
+	<header class="container">	
+		<div class="row">
+			<div class="col-md-offset-2 col-md-2 col-xs-12"><img src="img/logo.jpg" /></div>
+			<div class="col-md-8 col-xs-12"><h2 style="line-height:2.5em">便利校园服务平台</h2></div>
+		</div>
+	</header>
+		<div class="container">						<!-- bootstrap布局容器 -->
+			<div class="row">						<!-- bootstrap行 -->
+			
+			<!-- Bootstrap实现导航栏 -->
+		   <nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			  <a class="navbar-brand" href="#">便利校园服务平台</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav">
+				<li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>首页<span class="sr-only">(current)</span></a></li>
+				<li><a href="#">Link</a></li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">Separated link</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">One more separated link</a></li>
+				  </ul>
+				</li>
+			  </ul>
+			  <form class="navbar-form navbar-left">
+				<div class="form-group">
+				  <input type="text" class="form-control" placeholder="Search">
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			  </form>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Star</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star</a></li>
+			  </ul>
+			</div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+			</div>
+			
+			<div class="row">										<!-- bootstrap行 -->
+				<!-- 图片 图标联系方式 -->
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="pic">
+						<img src="img/pic1.jpg" class="img-responsive center-block img-circle" alt="Responsive image"/>
+						<h4 class="title">个人签名：</h4>
+						<h4>比起渺茫的未來，我更喜歡無知的現在。</h4>
+						<h4>
+						我不去想是否能够成功，
+						既然选择了远方，
+						便只顾风雨兼程；
+						我不去想能否赢得爱情，
+						既然钟情于玫瑰，
+						就勇敢地吐露真诚；
+						我不去想身后会不会袭来寒风冷雨，
+						既然目标是地平线，
+						留给世界的只能是背影；
+						我不去想未来是平坦还是泥泞，
+						只要热爱生命，
+						一切，都在意料之中。
+						</h4>
+					</div>
+				</div>
+				<!-- 个人签名 个人信息页 -->
+				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+					<form class="form-horizontal">
+				<div class="col-md-10">
+					<div class="form-group">
+						<label for="exampleInputEmail1" class="col-sm-4 control-label">账号</label>
+						<div class="col-sm-8">
+							<input type="email" class="form-control" id="exampleInputEmail1" readonly>
+						</div>
+					</div>
+					 <div class="form-group">
+						<label for="exampleInputEmail1" class="col-sm-4 control-label">昵称</label>
+						<div class="col-sm-8">
+							<input type="email" class="form-control" id="exampleInputEmail1">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1" class="col-sm-4 control-label">个性签名</label>
+						<div class="col-sm-8">
+							<input type="email" class="form-control" id="exampleInputEmail1">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1" class="col-sm-4 control-label">个人简介</label>
+						<div class="col-sm-8">
+							<textarea type="text" class="form-control" id="exampleInputEmail1" rows="5" cols="20" ></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1" class="col-sm-4 control-label">固定电话</label>
+						<div class="col-sm-8">
+							<input type="email" class="form-control" id="exampleInputEmail1">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1" class="col-sm-4 control-label">手机</label>
+						<div class="col-sm-8">
+							<input type="email" class="form-control" id="exampleInputEmail1">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1" class="col-sm-4 control-label">QQ</label>
+						<div class="col-sm-8">
+							<input type="email" class="form-control" id="exampleInputEmail1">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1" class="col-sm-4 control-label">微信号</label>
+						<div class="col-sm-8">
+							<input type="email" class="form-control" id="exampleInputEmail1">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1" class="col-sm-4 control-label">其他联系方式</label>
+						<div class="col-sm-8">
+							<input type="email" class="form-control" id="exampleInputEmail1">
+						</div>
+					</div>
+					  <!-- <div class="form-group">
+						<label for="exampleInputFile">File input</label>
+						<input type="file" id="exampleInputFile">
+						<p class="help-block">Example block-level help text here.</p>
+					  </div> 
+					  <div class="checkbox">
+						<label>
+						  <input type="checkbox"> Check me out
+						</label>
+					  </div>-->
+					<div class="form-group">
+						 <button type="submit" class="btn btn-default col-md-offset-5">保存</button>
+						  <button type="reset" class="btn btn-default">重置</button>
+					</div>
+					</div>
+					</form>
+				</div>
+			</div>
+	</div>
+	<footer class="container">
+		<div class="row">
+			<hr style=" height:1px;border:none;border-top:1px solid #000;"/>
+		</div>
+		<div class="row">
+			<address class="col-md-offset-4 col-md-8">
+				<strong>Twitter, Inc.</strong><br>
+				  1355 Market Street, Suite 900
+				<br>
+				  San Francisco, CA 94103
+				<br>
+				<abbr title="Phone">P:</abbr> (123) 456-7890
+			</address>
+			
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/content_page.js" ></script>
+</body>
+</html>

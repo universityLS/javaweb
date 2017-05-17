@@ -1,0 +1,40 @@
+
+/* @media (min-width: 768px) {
+  body{
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  body {
+    width: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    width: 1170px;
+  }
+} */
+@media (min-width: @screen-sm-min) {  }
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: @screen-md-min) {  }
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: @screen-lg-min) {  }
+body{
+	margin:0 auto;
+	padding:0;
+	font-family:'微软雅黑','Times New Roman', Times, serif;
+}
+div.pic{
+	clear:left;
+	margin-top:1em;
+	text-align:center;	
+}
+.pic>img{
+	border:2px solid #000044;
+}
+.pic .title{
+	 font-weight:900;
+	 text-align:left;
+}
