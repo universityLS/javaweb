@@ -1,0 +1,9 @@
+有什么记录的，需要讨论的记录在这里
+
+该项目已经转换成Maven管理第三方依赖，这样可以比较简单也可以避免手动下载jar的麻烦，
+需要jar包依赖的时候直接项目路径下的pom.xml添加<dependency>....</dependency>即可
+jar包的写法可以在  http://mvnrepository.com/   中找到
+
+使用maven管理依赖后，WEB-INF/libs下的所有依赖包都可以删除。
+
+！重要的是电脑要先安装Maven，怎么安装自行百度
