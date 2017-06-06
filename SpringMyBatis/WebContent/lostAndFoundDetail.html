@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<!--[if lt IE 9]>
+	<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style>
+	 body { padding-top: 70px; }
+	 #affix_nav{
+		
+	 }
+</style>
+<title>物品详细信息</title>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+
+<!-- 顶部导航 -->
+<div class="container-fuild">
+<!-- 附加导航未实现 -->
+	<nav class="navbar navbar-default navbar-fixed-top" id="affix_nav">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#collapsedNav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">
+				<img src="img/logo.jpg" style="height:100%;width:auto;" alt="Dandylions" />
+			</a>
+			<p class="navbar-text"><strong>失物招领平台</strong></p>
+		</div><!-- end of 顶部导航navbar-header -->
+		
+		<div class="collapse navbar-collapse" id="collapsedNav">
+			<ul class="nav navbar-nav">
+				<li><a href="#">主页</a></li><!-- class="active" -->
+				<li><a href="#">丢了啥</a></li>
+				<li><a href="#">捡到啥</a></li>
+				<li><a href="#">说点啥</a></li>
+				<li><a href="#">看点啥</a></li>
+			</ul>
+			<form class="navbar-form navbar-right" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+					<li><a href="">Contact Us</a></li>
+			</ul>
+		</div><!-- end of 顶部导航collapse navbar-collapse -->
+	</nav><!-- end of 顶部导航navbar navbar-default -->
+</div><!-- end of 顶部导航container-fluid -->
+
+<!-- 装载容器 -->
+<div class="container">
+<!-- 物品详细信息 面板 -->
+<div class="row">
+ <div class="col-sm-8">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+		<h3 class="panel-title">物品详细信息</h3>
+	  </div>
+	<!--  <div class="panel-body">
+		Panel content
+	  </div>-->
+	  <table class="table">
+		<tr>
+			<th width="30%">物品名称</th>
+			<td>物品名称</td>
+		</tr>
+		<tr>
+			<th>物品图片</th>
+			<td><img src="img/book.jpg" width="200em" class="img-responsive" alt="good image"></td>
+		</tr>
+		<tr>
+			<th>发布时间</th>
+			<td>2017年6月6日</td>
+		</tr>
+		<tr>
+			<th>发布人</th>
+			<td>我吃啤酒鸭</td>
+		</tr>
+		<tr>
+			<th>遗失/丢失地点</th>
+			<td>泽园一楼到综B路上</td>
+		</tr>
+		<tr>
+			<th>遗失/丢失地点</th>
+			<td>泽园一楼到综B路上</td>
+		</tr>
+	</table>
+	</div>
+ </div><!-- end of物品详细信息 面板col-sm-8 -->
+<!-- 相关物品信息 -->
+ <div class="col-sm-4">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+		<h3 class="panel-title">相关物品信息</h3>
+	  </div>
+	  <div class="panel-body">
+		<ul class="list-group">
+			<li class="list-group-item"><a href="#" >眼镜</a><span class="badge">14</span></li>
+			<li class="list-group-item"><a href="#" >水杯</a><span class="badge">6</span></li>
+			<li class="list-group-item"><a href="#" >课本</a><span class="badge">1</span></li>
+			<li class="list-group-item"><a href="#" >眼镜</a></li>
+			<li class="list-group-item"><a href="#" >眼镜</a></li>
+			<li class="list-group-item"><a href="#" >眼镜</a></li>
+		</ul>
+	  </div>
+	  
+	</div>
+ </div>
+</div><!-- end of物品详细信息 面板 -->
+</div><!-- end of container -->
+
+<!-- 底部网站信息栏 -->
+<footer class="container">
+   <hr>
+    <div class="row">
+	<!-- 网站服务信息 -->
+        <div class="col-md-3">
+			<h4><em>校园失物招领平台</em></h4>
+			<span>
+				24*7 竭力服务校园师生<br>
+				您的方便就是我们最大愿望<br>
+				随时随地、为您服务<br>
+			</span>
+        </div><!-- end of 网站服务信息col-md-3 -->
+		<!-- 友情链接 -->
+		<div class="col-md-6">
+			<div class="btn-group btn-group-justified" role="group" aria-label="Button Group">
+				<a href="http://www.bootcss.com/" target="_blank" class="btn btn-link">Bootstrap中文网</a>
+				<a href="http://www.runoob.com/" target="_blank" class="btn btn-link">菜鸟教程</a>
+				<a href="http://www.oschina.net/" target="_blank" class="btn btn-link">开源中国</a>
+			</div><!-- end of btn-group btn-group-justify-->
+			<div class="btn-group btn-group-justified" role="group" aria-label="Button Group">
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+			</div><!-- end of btn-group btn-group-justify-->
+			<div class="btn-group btn-group-justified" role="group" aria-label="Button Group">
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+			</div><!-- end of btn-group btn-group-justify-->
+			<div class="btn-group btn-group-justified" role="group" aria-label="Button Group">
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+			</div><!-- end of btn-group btn-group-justify-->
+		</div><!-- end of 友情链接col-md-6 -->
+		<!-- 技术支持 -->
+        <div class="col-md-3">
+			<h4>技术支持:</h4>
+			<em>岭南师范学院信息工程学院<br>14软件班<br></em>
+			<h4>2017年6月</h4>
+        </div><!-- end of 技术支持col-md-3 -->
+    </div>
+</footer><!-- end of 底部网站信息栏 -->
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+<script>
+
+</script>
+<!--
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+-->
+</body>
+</html>

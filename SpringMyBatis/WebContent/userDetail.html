@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<!--[if lt IE 9]>
+	<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style>
+	 body { padding-top: 70px; }
+	 #affix_nav{
+		
+	 }
+</style>
+<title>用户详细信息</title>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+
+<!-- 顶部导航 -->
+<div class="container-fuild">
+<!-- 附加导航未实现 -->
+	<nav class="navbar navbar-default navbar-fixed-top" id="affix_nav">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#collapsedNav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">
+				<img src="img/logo.jpg" style="height:100%;width:auto;" alt="Dandylions" />
+			</a>
+			<p class="navbar-text"><strong>失物招领平台</strong></p>
+		</div><!-- end of 顶部导航navbar-header -->
+		
+		<div class="collapse navbar-collapse" id="collapsedNav">
+			<ul class="nav navbar-nav">
+				<li><a href="#">主页</a></li><!-- class="active" -->
+				<li><a href="#">丢了啥</a></li>
+				<li><a href="#">捡到啥</a></li>
+				<li><a href="#">说点啥</a></li>
+				<li><a href="#">看点啥</a></li>
+			</ul>
+			<form class="navbar-form navbar-right" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+					<li><a href="">Contact Us</a></li>
+			</ul>
+		</div><!-- end of 顶部导航collapse navbar-collapse -->
+	</nav><!-- end of 顶部导航navbar navbar-default -->
+</div><!-- end of 顶部导航container-fluid -->
+
+<!-- 装载容器 -->
+<div class="container">
+<div class="col-sm-3 col-sm-push-1">
+	<div class="text-center">
+		<img src="img/book.jpg" alt="头像" class="img-circle" width="150px">
+		<p>点击更换头像</p>
+	</div>
+	<!-- 左侧导航 -->
+	<nav role="navigation">
+		<ul class="nav nav-pills nav-stacked test-center">
+			<li role="presentation" class="active"><a href="#">我的个人资料</a></li>
+			<li role="presentation" ><a href="#">Home</a></li>
+			<li role="presentation" ><a href="#">修改密码</a></li>
+			<li role="presentation" ><a href="#">Home</a></li>
+		</ul>
+	</nav><!-- end of col-sm-4 左侧导航-->
+</div>
+<div class="col-sm-6 col-sm-push-1">
+<!-- 用户详细信息表单，查看，修改后点击保存即提交表单保存 -->
+<form action="#" class="form-horizontal" role="form">
+	<div class="form-group">
+		<label for="account" class="col-sm-4 control-label">用户昵称：</label>
+		<div class=" col-sm-8 input-group">
+			<span class="input-group-addon"><span class="glyphicon glyphicon-user "></span></span>
+			<input type="text" autofocus required id="account" placeholder="昵称" class="form-control">
+		</div>
+	</div><!-- end of form-group -->
+	<div class="form-group">
+		<label for="mobile" class="col-sm-4 control-label">手机号码：</label>
+		<div class=" col-sm-8 input-group">
+			<span class="input-group-addon"><span class="glyphicon glyphicon-earphone "></span></span>
+			<input type="tel" id="mobile" placeholder="手机号码" class="form-control" maxlength="11">
+		</div>
+	</div><!-- end of form-group -->
+	<div class="form-group">
+		<label for="landline" class="col-sm-4 control-label">固定电话：</label>
+		<div class=" col-sm-8 input-group">
+			<span class="input-group-addon"><span class="glyphicon glyphicon-phone-alt "></span></span>
+			<input type="text" id="landline" placeholder="固定电话 例如 0759-83303023" class="form-control">
+		</div>
+	</div><!-- end of form-group -->
+	<div class="form-group">
+		<label for="qq_num" class="col-sm-4 control-label">QQ号码：</label>
+		<div class=" col-sm-8 input-group">
+			<span class="input-group-addon"><span class="glyphicon">QQ</span></span>
+			<input type="text" id="qq_num" placeholder="QQ号码" class="form-control">
+		</div>
+	</div><!-- end of form-group -->
+	<div class="form-group">
+		<label for="wechat" class="col-sm-4 control-label">微信号：</label>
+		<div class=" col-sm-8 input-group">
+			<span class="input-group-addon"><span class="glyphicon">微信</span></span>
+			<input type="text" id="wechat" placeholder="微信号" class="form-control">
+		</div>
+	</div><!-- end of form-group -->
+	<div class="form-group">
+		<label for="email" class="col-sm-4 control-label">e-mail：</label>
+		<div class=" col-sm-8 input-group">
+			<span class="input-group-addon"><span class="glyphicon glyphicon-cloud"></span></span>
+			<input type="text" id="email" placeholder="电子邮件" class="form-control">
+		</div>
+	</div><!-- end of form-group -->
+	<div class="form-group">
+		<label for="other" class="col-sm-4 control-label">其他：</label>
+		<div class=" col-sm-8 input-group">
+			<span class="input-group-addon"><span class=" glyphicon glyphicon-tags"></span></span>
+			<input type="text" id="other" placeholder="例如：微博=zhangsan" class="form-control">
+		</div>
+	</div><!-- end of form-group -->
+	<div class="form-group">
+		<label for="personalSignature" class="col-sm-4 control-label">个性签名：</label>
+		<div class=" col-sm-8 input-group">
+			<span class="input-group-addon"><span class="glyphicon glyphicon-apple "></span></span>
+			<textarea id="personalSignature" placeholder="个性签名" class="form-control" rows="5"></textarea>
+		</div>
+		</div><!-- end of form-group -->
+	<div class="form-group col-sm-12 col-sm-push-5 ">
+		<button class="btn btn-success" type="submit">保存修改</button>
+		<button class="btn btn-warning" type="reset">恢复修改</button>
+	</div><!-- end of form-group -->
+</form>
+</div><!-- end of col-sm-8 and the main form -->
+</div><!-- end of container -->
+
+<!-- 底部网站信息栏 -->
+<footer class="container">
+   <hr>
+    <div class="row">
+	<!-- 网站服务信息 -->
+        <div class="col-md-3">
+			<h4><em>校园失物招领平台</em></h4>
+			<span>
+				24*7 竭力服务校园师生<br>
+				您的方便就是我们最大愿望<br>
+				随时随地、为您服务<br>
+			</span>
+        </div><!-- end of 网站服务信息col-md-3 -->
+		<!-- 友情链接 -->
+		<div class="col-md-6">
+			<div class="btn-group btn-group-justified" role="group" aria-label="Button Group">
+				<a href="http://www.bootcss.com/" target="_blank" class="btn btn-link">Bootstrap中文网</a>
+				<a href="http://www.runoob.com/" target="_blank" class="btn btn-link">菜鸟教程</a>
+				<a href="http://www.oschina.net/" target="_blank" class="btn btn-link">开源中国</a>
+			</div><!-- end of btn-group btn-group-justify-->
+			<div class="btn-group btn-group-justified" role="group" aria-label="Button Group">
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+			</div><!-- end of btn-group btn-group-justify-->
+			<div class="btn-group btn-group-justified" role="group" aria-label="Button Group">
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+			</div><!-- end of btn-group btn-group-justify-->
+			<div class="btn-group btn-group-justified" role="group" aria-label="Button Group">
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+			</div><!-- end of btn-group btn-group-justify-->
+		</div><!-- end of 友情链接col-md-6 -->
+		<!-- 技术支持 -->
+        <div class="col-md-3">
+			<h4>技术支持:</h4>
+			<em>岭南师范学院信息工程学院<br>14软件班<br></em>
+			<h4>2017年6月</h4>
+        </div><!-- end of 技术支持col-md-3 -->
+    </div>
+</footer><!-- end of 底部网站信息栏 -->
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+<script>
+
+</script>
+<!--
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+-->
+</body>
+</html>
