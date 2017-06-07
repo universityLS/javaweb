@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
+<!--[if lt IE 9]>
+	<script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<style>
+	 body { padding-top: 70px; }
+	 #affix_nav{
+		
+	 }
+</style>
+<title>新增物品信息</title>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+
+<!-- 顶部导航 -->
+<div class="container-fuild">
+<!-- 附加导航未实现 -->
+	<nav class="navbar navbar-default navbar-fixed-top" id="affix_nav">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#collapsedNav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand">
+				<img src="img/logo.jpg" style="height:100%;width:auto;" alt="Dandylions" />
+			</a>
+			<p class="navbar-text"><strong>失物招领平台</strong></p>
+		</div><!-- end of 顶部导航navbar-header -->
+		
+		<div class="collapse navbar-collapse" id="collapsedNav">
+			<ul class="nav navbar-nav">
+				<li><a href="#">主页</a></li><!-- class="active" -->
+				<li><a href="#">丢了啥</a></li>
+				<li><a href="#">捡到啥</a></li>
+				<li><a href="#">说点啥</a></li>
+				<li><a href="#">看点啥</a></li>
+			</ul>
+			<form class="navbar-form navbar-right" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Search">
+				</div>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+					<li><a href="">Contact Us</a></li>
+			</ul>
+		</div><!-- end of 顶部导航collapse navbar-collapse -->
+	</nav><!-- end of 顶部导航navbar navbar-default -->
+</div><!-- end of 顶部导航container-fluid -->
+
+<!-- 装载容器 -->
+<div class="container">
+<div class="row">
+	<form class="form-horizontal">
+		<div class="form-group">
+			<label for="goodName">请输入物品名称：</label>
+			<input type="text" class="form-control" id="goodName" placeholder="物品名称">
+		</div>
+		<div class="form-group">
+			<label for="goodCatetory">请选择物品类别：</label>
+			<select class="form-control" id="goodCatetory">
+				<option>文具</option>
+				<option>证件类</option>
+				<option>文具</option>
+				<option>证件类</option>
+			</select>
+		</div>
+		<div class="form-group col-sm-4">
+				<label for="goodImgage">请选择物品图片：</label>
+				<input type="file" id="goodImgage" placeholder="物品名称">
+				<img src="img/book.jpg" class="img-thumbnail" width="200em" >
+		</div>
+		<div class="form-group col-sm-8">
+			<label for="publishDate">发布时间：</label>
+			<input type="text" class="form-control form_datetime" id="publishDate" placeholder="发布时间" readonly>
+    </div>            
+		</div>
+	</form>
+</div>
+</div><!-- end of container -->
+
+<!-- 底部网站信息栏 -->
+<footer class="container">
+   <hr>
+    <div class="row">
+	<!-- 网站服务信息 -->
+        <div class="col-md-3">
+			<h4><em>校园失物招领平台</em></h4>
+			<span>
+				24*7 竭力服务校园师生<br>
+				您的方便就是我们最大愿望<br>
+				随时随地、为您服务<br>
+			</span>
+        </div><!-- end of 网站服务信息col-md-3 -->
+		<!-- 友情链接 -->
+		<div class="col-md-6">
+			<div class="btn-group btn-group-justified" role="group" aria-label="Button Group">
+				<a href="http://www.bootcss.com/" target="_blank" class="btn btn-link">Bootstrap中文网</a>
+				<a href="http://www.runoob.com/" target="_blank" class="btn btn-link">菜鸟教程</a>
+				<a href="http://www.oschina.net/" target="_blank" class="btn btn-link">开源中国</a>
+			</div><!-- end of btn-group btn-group-justify-->
+			<div class="btn-group btn-group-justified" role="group" aria-label="Button Group">
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+			</div><!-- end of btn-group btn-group-justify-->
+			<div class="btn-group btn-group-justified" role="group" aria-label="Button Group">
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+			</div><!-- end of btn-group btn-group-justify-->
+			<div class="btn-group btn-group-justified" role="group" aria-label="Button Group">
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+				<a href="#" class="btn btn-link">友情链接</a>
+			</div><!-- end of btn-group btn-group-justify-->
+		</div><!-- end of 友情链接col-md-6 -->
+		<!-- 技术支持 -->
+        <div class="col-md-3">
+			<h4>技术支持:</h4>
+			<em>岭南师范学院信息工程学院<br>14软件班<br></em>
+			<h4>2017年6月</h4>
+        </div><!-- end of 技术支持col-md-3 -->
+    </div>
+</footer><!-- end of 底部网站信息栏 -->
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js" ></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+
+<script type="text/javascript">
+	$('#publishDate').datetimepicker({
+		language: 'zh-CN',//显示中文
+		format: 'yyyy-mm-dd',//显示格式
+		minView: "Date",//设置只显示到月份
+		initialDate: new Date(),//初始化当前日期
+		autoclose: true,//选中自动关闭
+		todayBtn: true//显示今日按钮
+	}).on("click",function(){
+        $("#publishDate").datetimepicker($("#datetimeEnd").val())
+    });
+</script>
+<!--
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+-->
+</body>
+</html>

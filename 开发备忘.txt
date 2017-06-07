@@ -7,3 +7,8 @@ jar包的写法可以在  http://mvnrepository.com/   中找到
 使用maven管理依赖后，WEB-INF/libs下的所有依赖包都可以删除。
 
 ！重要的是电脑要先安装Maven，怎么安装自行百度
+
+mysql执行sql文件方法：
+进入mysql的控制台后，使用source命令执行
+Mysql>source 【sql脚本文件的路径全名】 或 Mysql>\. 【sql脚本文件的路径全名】，示例：
+source d:\test\ss.sql 或者 \. d:\test\ss.sql
