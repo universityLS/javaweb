@@ -7,3 +7,5 @@ jar包的写法可以在  http://mvnrepository.com/   中找到
 使用maven管理依赖后，WEB-INF/libs下的所有依赖包都可以删除。
 
 ！重要的是电脑要先安装Maven，怎么安装自行百度
+
+欢迎加入，治星
