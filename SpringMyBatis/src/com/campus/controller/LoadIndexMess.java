@@ -1,4 +1,4 @@
-package ssm.controller;
+package com.campus.controller;
 
 import java.util.List;
 
@@ -13,11 +13,10 @@ import ssm.orm.ThingsMessMapper;
 
 @Controller
 @Transactional
-public class LoadIndexMess2 {
+public class LoadIndexMess {
 	@Autowired
 	private ThingsMessMapper thingsMessMapper;
-	
-	@RequestMapping(value = "indexPage2",  produces = "application/json")
+	@RequestMapping(value = "indexPage",  produces = "application/json")
 	@ResponseBody
 	public List<ThingsMess> queryIndexMess(){
 		List<ThingsMess> list = thingsMessMapper.getAllThingsMess();

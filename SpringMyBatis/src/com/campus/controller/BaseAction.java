@@ -1,4 +1,4 @@
-package ssm.controller;
+package com.campus.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

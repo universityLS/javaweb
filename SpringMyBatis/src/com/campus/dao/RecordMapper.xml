@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.campus.dao.RecordMapper" >
+  <resultMap id="BaseResultMap" type="com.campus.entity.Record" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="lost_found_flag" property="lostFoundFlag" jdbcType="INTEGER" />
+    <result column="titile" property="titile" jdbcType="VARCHAR" />
+    <result column="goods_name" property="goodsName" jdbcType="VARCHAR" />
+    <result column="img_path" property="imgPath" jdbcType="VARCHAR" />
+    <result column="publish_datetime" property="publishDatetime" jdbcType="TIMESTAMP" />
+    <result column="catetory_id" property="catetoryId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="finish_flag" property="finishFlag" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.campus.entity.Record" extends="BaseResultMap" >
+    <result column="description" property="description" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, lost_found_flag, titile, goods_name, img_path, publish_datetime, catetory_id, 
+    user_id, finish_flag
+  </sql>
+  <sql id="Blob_Column_List" >
+    description
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.campus.entity.RecordExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from record
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.campus.entity.RecordExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from record
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from record
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from record
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.campus.entity.RecordExample" >
+    delete from record
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.campus.entity.Record" >
+    insert into record (id, lost_found_flag, titile, 
+      goods_name, img_path, publish_datetime, 
+      catetory_id, user_id, finish_flag, 
+      description)
+    values (#{id,jdbcType=INTEGER}, #{lostFoundFlag,jdbcType=INTEGER}, #{titile,jdbcType=VARCHAR}, 
+      #{goodsName,jdbcType=VARCHAR}, #{imgPath,jdbcType=VARCHAR}, #{publishDatetime,jdbcType=TIMESTAMP}, 
+      #{catetoryId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{finishFlag,jdbcType=INTEGER}, 
+      #{description,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.campus.entity.Record" >
+    insert into record
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="lostFoundFlag != null" >
+        lost_found_flag,
+      </if>
+      <if test="titile != null" >
+        titile,
+      </if>
+      <if test="goodsName != null" >
+        goods_name,
+      </if>
+      <if test="imgPath != null" >
+        img_path,
+      </if>
+      <if test="publishDatetime != null" >
+        publish_datetime,
+      </if>
+      <if test="catetoryId != null" >
+        catetory_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="finishFlag != null" >
+        finish_flag,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="lostFoundFlag != null" >
+        #{lostFoundFlag,jdbcType=INTEGER},
+      </if>
+      <if test="titile != null" >
+        #{titile,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsName != null" >
+        #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="imgPath != null" >
+        #{imgPath,jdbcType=VARCHAR},
+      </if>
+      <if test="publishDatetime != null" >
+        #{publishDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="catetoryId != null" >
+        #{catetoryId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="finishFlag != null" >
+        #{finishFlag,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.campus.entity.RecordExample" resultType="java.lang.Integer" >
+    select count(*) from record
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update record
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.lostFoundFlag != null" >
+        lost_found_flag = #{record.lostFoundFlag,jdbcType=INTEGER},
+      </if>
+      <if test="record.titile != null" >
+        titile = #{record.titile,jdbcType=VARCHAR},
+      </if>
+      <if test="record.goodsName != null" >
+        goods_name = #{record.goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imgPath != null" >
+        img_path = #{record.imgPath,jdbcType=VARCHAR},
+      </if>
+      <if test="record.publishDatetime != null" >
+        publish_datetime = #{record.publishDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.catetoryId != null" >
+        catetory_id = #{record.catetoryId,jdbcType=INTEGER},
+      </if>
+      <if test="record.userId != null" >
+        user_id = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.finishFlag != null" >
+        finish_flag = #{record.finishFlag,jdbcType=INTEGER},
+      </if>
+      <if test="record.description != null" >
+        description = #{record.description,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update record
+    set id = #{record.id,jdbcType=INTEGER},
+      lost_found_flag = #{record.lostFoundFlag,jdbcType=INTEGER},
+      titile = #{record.titile,jdbcType=VARCHAR},
+      goods_name = #{record.goodsName,jdbcType=VARCHAR},
+      img_path = #{record.imgPath,jdbcType=VARCHAR},
+      publish_datetime = #{record.publishDatetime,jdbcType=TIMESTAMP},
+      catetory_id = #{record.catetoryId,jdbcType=INTEGER},
+      user_id = #{record.userId,jdbcType=INTEGER},
+      finish_flag = #{record.finishFlag,jdbcType=INTEGER},
+      description = #{record.description,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update record
+    set id = #{record.id,jdbcType=INTEGER},
+      lost_found_flag = #{record.lostFoundFlag,jdbcType=INTEGER},
+      titile = #{record.titile,jdbcType=VARCHAR},
+      goods_name = #{record.goodsName,jdbcType=VARCHAR},
+      img_path = #{record.imgPath,jdbcType=VARCHAR},
+      publish_datetime = #{record.publishDatetime,jdbcType=TIMESTAMP},
+      catetory_id = #{record.catetoryId,jdbcType=INTEGER},
+      user_id = #{record.userId,jdbcType=INTEGER},
+      finish_flag = #{record.finishFlag,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.campus.entity.Record" >
+    update record
+    <set >
+      <if test="lostFoundFlag != null" >
+        lost_found_flag = #{lostFoundFlag,jdbcType=INTEGER},
+      </if>
+      <if test="titile != null" >
+        titile = #{titile,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsName != null" >
+        goods_name = #{goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="imgPath != null" >
+        img_path = #{imgPath,jdbcType=VARCHAR},
+      </if>
+      <if test="publishDatetime != null" >
+        publish_datetime = #{publishDatetime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="catetoryId != null" >
+        catetory_id = #{catetoryId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="finishFlag != null" >
+        finish_flag = #{finishFlag,jdbcType=INTEGER},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.campus.entity.Record" >
+    update record
+    set lost_found_flag = #{lostFoundFlag,jdbcType=INTEGER},
+      titile = #{titile,jdbcType=VARCHAR},
+      goods_name = #{goodsName,jdbcType=VARCHAR},
+      img_path = #{imgPath,jdbcType=VARCHAR},
+      publish_datetime = #{publishDatetime,jdbcType=TIMESTAMP},
+      catetory_id = #{catetoryId,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      finish_flag = #{finishFlag,jdbcType=INTEGER},
+      description = #{description,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.campus.entity.Record" >
+    update record
+    set lost_found_flag = #{lostFoundFlag,jdbcType=INTEGER},
+      titile = #{titile,jdbcType=VARCHAR},
+      goods_name = #{goodsName,jdbcType=VARCHAR},
+      img_path = #{imgPath,jdbcType=VARCHAR},
+      publish_datetime = #{publishDatetime,jdbcType=TIMESTAMP},
+      catetory_id = #{catetoryId,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      finish_flag = #{finishFlag,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

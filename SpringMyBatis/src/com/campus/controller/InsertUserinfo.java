@@ -1,4 +1,4 @@
-package ssm.controller;
+package com.campus.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
