@@ -18,8 +18,8 @@
     http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
     http://www.springframework.org/schema/mvc
     http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
-    <context:component-scan base-package="ssm.dao"></context:component-scan>
-    <context:component-scan base-package="ssm.service"></context:component-scan>
+    <context:component-scan base-package="com.campus.dao"></context:component-scan>
+    <context:component-scan base-package="com.campus.service"></context:component-scan>
 <!--     <bean id="dataSource2"
         class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
@@ -27,25 +27,18 @@
         <property name="username" value="zzy"></property>
         <property name="password" value="110zzy...."></property>
     </bean> -->
-<!--         <bean id="dataSource"
+        <bean id="dataSource"
         class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://localhost:3306/swzl"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/campusAllInOne"></property>
         <property name="username" value="root"></property>
         <property name="password" value="110zzy...."></property>
-    </bean> -->
-       <bean id="dataSource"
-        class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://localhost:3306/swzl"></property>
-        <property name="username" value="root"></property>
-        <property name="password" value="1111"></property>
     </bean>
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"></property>
     </bean>
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="ssm.orm"></property>
+        <property name="basePackage" value="com.campus.dao"></property>
         <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
     </bean>
     <bean id="transactionManager"
