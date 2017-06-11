@@ -1,9 +1,11 @@
 package com.campus.dao;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
 import com.campus.entity.Comment;
 import com.campus.entity.CommentExample;
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
 public interface CommentMapper {
     int countByExample(CommentExample example);
