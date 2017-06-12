@@ -8,7 +8,7 @@
 		<!-- 读取jdbc.properties文件的bean -->
        <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
               <property name="ignoreUnresolvablePlaceholders" value="true"/>
-              <property name="location" value="classpath*:config/db.properties"/>
+              <property name="location" value="classpath:config/db.properties"/>
        </bean>
        
        <!-- 配置数据源 -->

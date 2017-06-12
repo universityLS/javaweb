@@ -2,10 +2,15 @@ package com.campus.mapper.base;
 
 import com.campus.entity.Record;
 import com.campus.entity.RecordExample;
+
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface RecordMapper {
+	public List<Record> getAllThingsMess();
+	
+	
     int countByExample(RecordExample example);
 
     int deleteByExample(RecordExample example);
