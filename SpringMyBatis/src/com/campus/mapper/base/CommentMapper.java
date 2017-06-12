@@ -1,4 +1,4 @@
-package com.campus.dao;
+package com.campus.mapper.base;
 
 import java.util.List;
 

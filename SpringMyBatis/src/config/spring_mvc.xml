@@ -18,24 +18,13 @@
     http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
     http://www.springframework.org/schema/mvc
     http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
-    <context:component-scan base-package="ssm.controller"></context:component-scan>
-<!--     <bean
-        class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
-        <property name="messageConverters">
-            <list>
-                <ref bean="stringHttpMessageConverter"/>
-            </list>
-        </property>
-    </bean>
-    <bean id="stringHttpMessageConverter"
-        class="org.springframework.http.converter.StringHttpMessageConverter">
-        <property name="supportedMediaTypes">
-            <list>
-                <value>text/plain;charset=utf-8</value>
-            </list>
-        </property>
-    </bean> -->
-    <mvc:annotation-driven></mvc:annotation-driven>
-    <!-- 对控制层进行事务代理AOP支持 -->
-    <aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+    
+    <!-- 配置了注解驱动, 就不用配置注解的映射器和适配器 -->
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<!-- 组件扫描器, 指定要扫描的包中通过注解注册的组件 -->
+	<context:component-scan base-package="com.campus.controller"></context:component-scan>
+	
+	<!-- 视图解析器 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
 </beans>

@@ -1,4 +1,4 @@
-package com.campus.dao;
+package com.campus.mapper.base;
 
 import com.campus.entity.GoodsCatetory;
 import com.campus.entity.GoodsCatetoryExample;
