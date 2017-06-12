@@ -1,4 +1,4 @@
-package com.campus.dao;
+package com.campus.mapper.base;
 
 import com.campus.entity.User;
 import com.campus.entity.UserExample;
